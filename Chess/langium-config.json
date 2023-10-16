@@ -1,0 +1,15 @@
+{
+    "projectName": "ChessGame",
+    "languages": [{
+        "id": "chess-game",
+        "grammar": "src/language/chess-game.langium",
+        "fileExtensions": [".chess"],
+        "textMate": {
+            "out": "syntaxes/chess-game.tmLanguage.json"
+        },
+        "monarch": {
+            "out": "syntaxes/chess-game.monarch.ts"
+        }
+    }],
+    "out": "src/language/generated"
+}

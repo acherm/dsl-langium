@@ -1,0 +1,15 @@
+{
+    "projectName": "PollSystem",
+    "languages": [{
+        "id": "poll-system",
+        "grammar": "src/language/poll-system.langium",
+        "fileExtensions": [".poll"],
+        "textMate": {
+            "out": "syntaxes/poll-system.tmLanguage.json"
+        },
+        "monarch": {
+            "out": "syntaxes/poll-system.monarch.ts"
+        }
+    }],
+    "out": "src/language/generated"
+}

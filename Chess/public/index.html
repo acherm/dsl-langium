@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <!-- Page & Monaco styling -->
+        <link href="styles.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css" integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU" crossorigin="anonymous">
+        <title>ChessGame in Langium</title>
+    </head>
+    <body>
+        <h1>ChessGame in Langium</h1>
+        <!--- Begin Example HTML ------------------------------------------------------>
+        <div id="myBoard" style="width: 400px"></div>
+        <!--- End Example HTML -------------------------------------------------------->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        
+        <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js" integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD" crossorigin="anonymous"></script>
+        <script>
+        // --- Begin Example JS --------------------------------------------------------
+        var board = Chessboard('myBoard');
+        // --- End Example JS ----------------------------------------------------------
+        </script>
+
+        <div class="wrapper">
+            <!-- Monaco Root -->
+            <div id="monaco-editor-root"></div>
+        </div>
+        
+        <footer>
+            <p style="font-style:italic">Powered by</p>
+            <img width="125" src="https://langium.org/assets/langium_logo_w_nib.svg" alt="Langium">
+        </footer>
+        <!-- Monaco Configuration -->
+        <script type="module" src="setup.js"></script>
+
+
+        
+        
+    </body>
+</html>

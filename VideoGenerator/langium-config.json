@@ -1,0 +1,15 @@
+{
+    "projectName": "VideoGenerator",
+    "languages": [{
+        "id": "video-generator",
+        "grammar": "src/language/video-generator.langium",
+        "fileExtensions": [".videogen"],
+        "textMate": {
+            "out": "syntaxes/video-generator.tmLanguage.json"
+        },
+        "monarch": {
+            "out": "syntaxes/video-generator.monarch.ts"
+        }
+    }],
+    "out": "src/language/generated"
+}
