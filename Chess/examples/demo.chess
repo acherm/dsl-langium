@@ -1,0 +1,6 @@
+White: "INSA INFO5"
+Black: "ChatGPT"
+e2 e4
+e7 e5
+N g1 f3
+knight at b8 moves_to c6

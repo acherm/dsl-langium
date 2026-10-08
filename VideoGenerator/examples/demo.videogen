@@ -1,0 +1,3 @@
+mandatory videoseq intro "intro.mp4"
+optional videoseq teaser "teaser.mp4"
+alternatives ending { videoseq e1 "end1.mp4" videoseq e2 "end2.mp4" }

@@ -53,7 +53,8 @@ export function generateMoves(moves: Move[]): String {
         
     });
 
-    return chess.pgn();
+    // chess.js >= 1.0 adds the Seven Tag Roster headers to pgn(): build the movetext from the history instead
+    return chess.history().map((san, i) => (i % 2 === 0 ? `${i / 2 + 1}. ${san}` : san)).join(' ');
 }
 
 

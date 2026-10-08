@@ -1,3 +1,6 @@
+import * as fs from 'node:fs';
+import * as path from 'node:path';
+import * as url from 'node:url';
 import type { Model } from '../language/generated/ast.js';
 import chalk from 'chalk';
 import { Command } from 'commander';
@@ -23,7 +26,7 @@ export default function(): void {
 
     program
         // eslint-disable-next-line @typescript-eslint/no-var-requires
-        .version(require('../../package.json').version);
+        .version(JSON.parse(fs.readFileSync(path.resolve(url.fileURLToPath(new URL('.', import.meta.url)), '..', '..', 'package.json'), 'utf8')).version);
 
     const fileExtensions = VideoGeneratorLanguageMetaData.fileExtensions.join(', ');
     program

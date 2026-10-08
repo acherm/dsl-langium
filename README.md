@@ -1,4 +1,8 @@
-# Some experiments and demonstrators of domain-specific languages in Langium 
+# Some experiments and demonstrators of domain-specific languages in Langium
+
+> Ported to **Langium 4.4** (requires Node.js ≥ 20.10 and npm ≥ 11.6; Node 24 LTS recommended).
+> In each project: `npm install && npm run langium:generate && npm run build`, then e.g.
+> `node bin/cli.js generate examples/demo.poll`. What changed since Langium 2.0: [MIGRATION.md](MIGRATION.md).
 
 The DSLs have been used in the past mostly for educational purpose (see eg https://github.com/FAMILIAR-project/HackOurLanguages-SIF or https://github.com/acherm/teaching-MDE-MIAGE1718), and originally in Xtext since something like 2012. 
 Here is the list of DSLs:
@@ -13,7 +17,7 @@ Here is the list of DSLs:
 
 Langium sounds great but there are missing functionalities or unpleasant user experience:
  * testing framework (the boilerplate of the demonstration with Chess can certainly be systematized and generated in a langium generator
- * CLI bug (needs to be fixed): main is not exposed/imported
+ * ~~CLI bug: main is not exposed/imported~~ (fixed in the Langium 4.4 port)
  * "ability to generate DSL code from an in-memory data structure like a programmatically constructed AST" basically for model-to-model transformations, and then model-to-text to serialize the model in the original syntax... seems to be on the roadmap: https://www.typefox.io/blog/langium-1.0-a-mature-language-toolkit/ 
  * the "hello-world" automatically generated involves a specific validators and a demonstration of a generator... Unfortunately, when writing your own grammar, you have to fix this.
 

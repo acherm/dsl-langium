@@ -1,5 +1,5 @@
-import type { DefaultSharedModuleContext, LangiumServices, LangiumSharedServices, Module, PartialLangiumServices } from 'langium';
-import { createDefaultModule, createDefaultSharedModule, inject } from 'langium';
+import { type Module, inject } from 'langium';
+import { createDefaultModule, createDefaultSharedModule, type DefaultSharedModuleContext, type LangiumServices, type LangiumSharedServices, type PartialLangiumServices } from 'langium/lsp';
 import { VideoGeneratorGeneratedModule, VideoGeneratorGeneratedSharedModule } from './generated/module.js';
 import { VideoGeneratorValidator, registerValidationChecks } from './video-generator-validator.js';
 
@@ -59,5 +59,9 @@ export function createVideoGeneratorServices(context: DefaultSharedModuleContext
     );
     shared.ServiceRegistry.register(VideoGenerator);
     registerValidationChecks(VideoGenerator);
+    if (!context.connection) {
+        // not running inside a language server: initialize the configuration provider at once
+        shared.workspace.ConfigurationProvider.initialized({});
+    }
     return { shared, VideoGenerator };
 }

@@ -1,0 +1,12 @@
+PollSystem {
+    Poll lunch {
+        Question q1 { "Where do we eat today?" options {
+            a: "Cafeteria"
+            b: "Crêperie"
+        } }
+        Question q2 { "At what time?" options {
+            noon: "12:00"
+            late: "13:00"
+        } }
+    }
+}

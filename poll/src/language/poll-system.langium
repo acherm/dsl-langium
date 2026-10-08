@@ -7,7 +7,7 @@ Poll:
     'Poll' name=ID '{' questions+=Question+ '}';
 
 Question:
-    'Question' id=ID '{' STRING 'options' '{' options+=Option+ '}' '}';
+    'Question' id=ID '{' text=STRING 'options' '{' options+=Option+ '}' '}';
 
 Option:
     id=ID ':' text=STRING;

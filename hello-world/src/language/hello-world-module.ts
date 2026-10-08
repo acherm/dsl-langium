@@ -1,5 +1,5 @@
-import type { DefaultSharedModuleContext, LangiumServices, LangiumSharedServices, Module, PartialLangiumServices } from 'langium';
-import { createDefaultModule, createDefaultSharedModule, inject } from 'langium';
+import { type Module, inject } from 'langium';
+import { createDefaultModule, createDefaultSharedModule, type DefaultSharedModuleContext, type LangiumServices, type LangiumSharedServices, type PartialLangiumServices } from 'langium/lsp';
 import { HelloWorldGeneratedModule, HelloWorldGeneratedSharedModule } from './generated/module.js';
 import { HelloWorldValidator, registerValidationChecks } from './hello-world-validator.js';
 
@@ -59,5 +59,9 @@ export function createHelloWorldServices(context: DefaultSharedModuleContext): {
     );
     shared.ServiceRegistry.register(HelloWorld);
     registerValidationChecks(HelloWorld);
+    if (!context.connection) {
+        // not running inside a language server: initialize the configuration provider at once
+        shared.workspace.ConfigurationProvider.initialized({});
+    }
     return { shared, HelloWorld };
 }

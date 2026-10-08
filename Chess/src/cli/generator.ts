@@ -1,6 +1,6 @@
 import type { Game } from '../language/generated/ast.js';
 import * as fs from 'node:fs';
-import { CompositeGeneratorNode, NL, toString } from 'langium';
+import { CompositeGeneratorNode, NL, toString } from 'langium/generate';
 import * as path from 'node:path';
 import { extractDestinationAndName } from './cli-util.js';
 import { convertMovesToPGNWithPython, generateGame} from '../generator/pgn_converter.js';
